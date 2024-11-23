@@ -1,0 +1,34 @@
+<?php
+
+namespace Database\Seeders;
+use App\Models\Scan;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class ScanSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+       $datas = [
+       
+        ['id' => 1,'title' =>'simposium'],
+        ['id' => 2,'title' =>'Workshop 1'],
+        ['id' => 3,'title' =>'Workshop 2'],
+        ['id' => 4,'title' =>'Workshop 3'],
+        ['id' => 5,'title' =>'Workshop 4'],
+        ['id' => 6,'title' =>'Workshop 5'],
+        ['id' => 7,'title' =>'Workshop 5'],
+        ['id' => 8,'title' =>'Pameran'],
+        ['id' => 9,'title' =>'Snack'],
+        
+
+       ];
+
+       foreach ($datas as $key => $data){
+        Scan::create($data);
+       }
+    }
+}
